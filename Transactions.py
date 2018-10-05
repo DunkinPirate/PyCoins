@@ -1,4 +1,5 @@
 import PyCoins as pyCoins
+import Logger as logger 
 from bit import Key
 import time
 
@@ -18,5 +19,5 @@ class SendBTC:
             print('[+]Transaction failed')
         print('[+]Transaction successful! You sent {} BTC to ' + SendBTC.ReceivingAddress).format(SendBTC.Amount)
         print('[+] Your balance is now {} BTC').format(pyCoins.BTCInfo.my_key.get_balance('btc'))
-        # Write function here
+        logger.WriteTransaction() 
 
